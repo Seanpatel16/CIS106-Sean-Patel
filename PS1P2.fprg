@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-19 01:06:38 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUMyUFIyMzE7MjAyMi0wMS0xOTsxMjo1MDowNiBQTTszMjc5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUMyUFIyMzE7MjAyMi0wMS0xOTswMTowNjozOCBQTTsyOzMzOTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;enter name&quot;" newline="True"/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <input variable="Name"/>
+            <output expression="&quot;enter first score&quot;" newline="True"/>
+            <declare name="Score1" type="Integer" array="False" size=""/>
+            <input variable="Score1"/>
+            <output expression="&quot;enter score 2&quot;" newline="True"/>
+            <declare name="Score2" type="Integer" array="False" size=""/>
+            <input variable="Score2"/>
+            <declare name="Ave" type="Integer" array="False" size=""/>
+            <declare name="add" type="Integer" array="False" size=""/>
+            <assign variable="add" expression="Score1 + Score2"/>
+            <assign variable="Ave" expression="add/2"/>
+            <output expression="Name" newline="True"/>
+            <output expression="Ave" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

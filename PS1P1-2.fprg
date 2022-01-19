@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-19 12:49:36 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUMyUFIyMzE7MjAyMi0wMS0xOTsxMjoyNDoyMCBQTTszMjc2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUMyUFIyMzE7MjAyMi0wMS0xOTsxMjo0OTozNiBQTTsyOzMzOTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;This program will calculate the sum product and difference of any two numbers&quot;" newline="True"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <declare name="product" type="Integer" array="False" size=""/>
+            <declare name="diff" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <input variable="A"/>
+            <input variable="B"/>
+            <assign variable="sum" expression="A + B"/>
+            <assign variable="product" expression="A * B"/>
+            <assign variable="diff" expression="A - B"/>
+            <output expression="&quot;sum&quot;" newline="True"/>
+            <output expression="sum" newline="True"/>
+            <output expression="&quot;Product&quot;" newline="True"/>
+            <output expression="product" newline="True"/>
+            <output expression="&quot;difference&quot;" newline="True"/>
+            <output expression="diff" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
