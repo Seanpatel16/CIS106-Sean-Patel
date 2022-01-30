@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-29 01:55:39 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTJEQUNOQlQ7MjAyMi0wMS0yOTswMTo0Nzo1MSBQTTszMzMz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTJEQUNOQlQ7MjAyMi0wMS0yOTswMTo1NTozOSBQTTsyOzM0NDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="length" type="Integer" array="False" size=""/>
+            <output expression="&quot;first enter the length of the rectangle&quot;" newline="True"/>
+            <input variable="length"/>
+            <output expression="&quot;now enter the width of the rectangle&quot;" newline="True"/>
+            <declare name="width" type="Integer" array="False" size=""/>
+            <input variable="width"/>
+            <declare name="area" type="Integer" array="False" size=""/>
+            <assign variable="area" expression="width*length"/>
+            <declare name="circ" type="Integer" array="False" size=""/>
+            <assign variable="circ" expression="width*2+length*2"/>
+            <output expression="&quot;area = &quot; &amp; area &amp; &quot;circumference = &quot; &amp; circ" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

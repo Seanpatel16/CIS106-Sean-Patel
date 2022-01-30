@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-28 07:46:14 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJFSVU4S0g7MjAyMi0wMS0yODswNzozMTo1NiBQTTszMzcw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJFSVU4S0g7MjAyMi0wMS0yODswNzo0NjoxNCBQTTsyOzM0Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;first enter your last name&quot;" newline="True"/>
+            <declare name="lname" type="String" array="False" size=""/>
+            <input variable="lname"/>
+            <output expression="&quot;now enter hours&quot;" newline="True"/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <input variable="hours"/>
+            <output expression="&quot;now enter payrate&quot;" newline="True"/>
+            <declare name="pay" type="Integer" array="False" size=""/>
+            <input variable="pay"/>
+            <declare name="lg" type="Integer" array="False" size=""/>
+            <assign variable="lg" expression="hours*pay"/>
+            <output expression="lname &amp; lg" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
