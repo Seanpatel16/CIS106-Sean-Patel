@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-05 05:25:46 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdGVTExOFA7MjAyMi0wMi0wNTswNDo1NjowNSBQTTszMzEy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdGVTExOFA7MjAyMi0wMi0wNTswNToyNTo0NiBQTTszOzM0MjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;first enter the name of the appliance&quot;" newline="True"/>
+            <declare name="appname" type="String" array="False" size=""/>
+            <input variable="appname"/>
+            <output expression="&quot;now enter the cost of the appliance&quot;" newline="True"/>
+            <declare name="appcost" type="Integer" array="False" size=""/>
+            <input variable="appcost"/>
+            <declare name="warren" type="Integer" array="False" size=""/>
+            <declare name="cwarren" type="Integer" array="False" size=""/>
+            <declare name="capp" type="Integer" array="False" size=""/>
+            <if expression="appcost &gt;= 1000">
+                <then>
+                    <assign variable="warren" expression="0.10"/>
+                </then>
+                <else>
+                    <assign variable="warren" expression="0.05"/>
+                </else>
+            </if>
+            <assign variable="cwarren" expression="appcost * warren"/>
+            <assign variable="capp" expression="cwarren+appcost"/>
+            <output expression="&quot;the &quot; &amp; appname &amp; &quot; total cost is &quot; &amp; capp &amp; &quot; the warrenty cost is &quot; &amp; cwarren" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

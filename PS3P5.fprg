@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-05 05:50:55 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdGVTExOFA7MjAyMi0wMi0wNTswNTozMzoxMCBQTTszMzA0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdGVTExOFA7MjAyMi0wMi0wNTswNTo1MDo1NSBQTTsyOzM0MjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;enter your last name&quot;" newline="True"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <input variable="name"/>
+            <output expression="&quot;now enter the number of dependents&quot;" newline="True"/>
+            <declare name="dep" type="Integer" array="False" size=""/>
+            <input variable="dep"/>
+            <output expression="&quot;now enter your gross income&quot;" newline="True"/>
+            <declare name="gross" type="Integer" array="False" size=""/>
+            <input variable="gross"/>
+            <declare name="adjgr" type="Integer" array="False" size=""/>
+            <assign variable="adjgr" expression="gross-(dep*12000)"/>
+            <declare name="tax" type="Integer" array="False" size=""/>
+            <if expression="adjgr&lt;50000">
+                <then>
+                    <assign variable="tax" expression="0.10"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression="0.20"/>
+                </else>
+            </if>
+            <declare name="inc" type="Integer" array="False" size=""/>
+            <assign variable="inc" expression="adjgr*tax"/>
+            <output expression="name &amp; &quot; your gross income &quot; &amp; gross &amp; &quot; you had &quot; &amp; dep &amp; &quot; dependents &quot; &amp; &quot; your adjusted gross income is &quot; &amp; adjgr &amp; &quot;your income tax was &quot; &amp; inc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
