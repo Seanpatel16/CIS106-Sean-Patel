@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-13 09:08:25 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswODo1Nzo0MSBQTTszMzIz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswOTowODoyNSBQTTsyOzM0MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;enter ticket amount&quot;" newline="True"/>
+            <declare name="tamo" type="Integer" array="False" size=""/>
+            <input variable="tamo"/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <if expression="tamo &gt;= 25">
+                <then>
+                    <assign variable="price" expression="50"/>
+                </then>
+                <else>
+                    <if expression="tamo &lt; 10 &lt; 25">
+                        <then>
+                            <assign variable="price" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="tamo &gt; 5 &lt; 9">
+                                <then>
+                                    <assign variable="price" expression="70"/>
+                                </then>
+                                <else>
+                                    <if expression="tamo &gt; 5">
+                                        <then>
+                                            <assign variable="price" expression="75"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="tprice" type="Integer" array="False" size=""/>
+            <assign variable="tprice" expression="price*tamo"/>
+            <output expression="&quot;price per ticket &quot; &amp; price &amp; &quot; total price &quot; &amp; tprice &amp; &quot;total amount of tickets&quot; &amp; tamo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

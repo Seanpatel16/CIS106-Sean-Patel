@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-13 08:56:46 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswODoyMzowMCBQTTszMzEx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswODo1Njo0NiBQTTsyOzM0MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;enter the principle amount&quot;" newline="True"/>
+            <declare name="pamo" type="Integer" array="False" size=""/>
+            <input variable="pamo"/>
+            <declare name="years" type="Integer" array="False" size=""/>
+            <declare name="irate" type="Integer" array="False" size=""/>
+            <if expression="pamo &gt; 100000">
+                <then>
+                    <assign variable="years" expression="5"/>
+                    <assign variable="irate" expression="0.06"/>
+                </then>
+                <else>
+                    <if expression="pamo &lt;= 50000 &lt;= 100000">
+                        <then>
+                            <assign variable="years" expression="10"/>
+                            <assign variable="irate" expression="0.05"/>
+                        </then>
+                        <else>
+                            <if expression="pamo">
+                                <then>
+                                    <assign variable="years" expression="5"/>
+                                    <assign variable="irate" expression="0.02"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="iamount" type="Integer" array="False" size=""/>
+            <assign variable="iamount" expression="irate*pamo*12"/>
+            <output expression="&quot;principle amount &quot; &amp; pamo &amp; &quot;interest rate&quot; &amp; irate &amp; &quot;interest rate amount &quot; &amp; iamount" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

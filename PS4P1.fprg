@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-13 06:39:07 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswNjoyNTozNSBQTTszMzE5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswNjozOTowNyBQTTsyOzM0MzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qua" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the quatity&quot;" newline="True"/>
+            <input variable="qua"/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <if expression="qua &gt; 10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="qua &gt;5000">
+                        <then>
+                            <assign variable="price" expression="20"/>
+                        </then>
+                        <else>
+                            <if expression="qua &lt; 5000">
+                                <then>
+                                    <assign variable="price" expression="30"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="tax" type="Integer" array="False" size=""/>
+            <declare name="tprice" type="Integer" array="False" size=""/>
+            <assign variable="tprice" expression="qua*price"/>
+            <assign variable="tax" expression="tprice*0.7"/>
+            <declare name="taxprice" type="Integer" array="False" size=""/>
+            <assign variable="taxprice" expression="tax+tprice"/>
+            <output expression="&quot;tax $&quot; &amp; tax &amp; &quot; total price $&quot; &amp; taxprice &amp; &quot; extended price $&quot; &amp; tprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

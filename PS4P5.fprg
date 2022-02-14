@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-13 09:22:11 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswOTowOToxMiBQTTszMzE5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswOToxMjoyNyBQTTsxO1Bob3RvblVzZXI7RUMyQU1BWi1JQk80MFBFOzIwMjItMDItMTM7MDY6NDI6MTQgUE07UFM0UDIuZnByZzs3Njgy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlCTzQwUEU7MjAyMi0wMi0xMzswOToyMjoxMSBQTTsyOzM0MjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;enter last name&quot;" newline="True"/>
+            <declare name="lname" type="Integer" array="False" size=""/>
+            <input variable="lname"/>
+            <output expression="&quot;now enter salary&quot;" newline="True"/>
+            <declare name="sal" type="Integer" array="False" size=""/>
+            <input variable="sal"/>
+            <output expression="&quot;enter job levels&quot;" newline="True"/>
+            <declare name="joblvl" type="Integer" array="False" size=""/>
+            <input variable="joblvl"/>
+            <declare name="brate" type="Integer" array="False" size=""/>
+            <if expression="joblvl &gt;=10">
+                <then>
+                    <assign variable="brate" expression="0.10"/>
+                </then>
+                <else>
+                    <if expression="joblvl &gt;= 5 &lt; 9">
+                        <then>
+                            <assign variable="brate" expression="0.20"/>
+                        </then>
+                        <else>
+                            <if expression="joblvl &lt;= 4">
+                                <then>
+                                    <assign variable="brate" expression="0.25"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="bonus" type="Integer" array="False" size=""/>
+            <assign variable="bonus" expression="brate*sal"/>
+            <output expression="lname &amp; &quot; bonus amount &quot; &amp; bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
