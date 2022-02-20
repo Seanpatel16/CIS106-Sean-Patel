@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-20 11:14:49 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMTowOTo1NyBBTTszMzIx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMToxNDo0OSBBTTsyOzM0Mjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a start value&quot;" newline="True"/>
+            <input variable="start"/>
+            <output expression="&quot;enter a stop value&quot;" newline="True"/>
+            <declare name="stop" type="Integer" array="False" size=""/>
+            <input variable="stop"/>
+            <output expression="&quot;enter a increment value&quot;" newline="True"/>
+            <declare name="inc" type="Integer" array="False" size=""/>
+            <input variable="inc"/>
+            <while expression="start &lt; stop">
+                <assign variable="start" expression="start + inc"/>
+                <output expression="start" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

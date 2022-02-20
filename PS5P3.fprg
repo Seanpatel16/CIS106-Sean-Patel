@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-20 11:29:43 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMToxNTowNyBBTTszMzEz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMToyOTo0MyBBTTsyOzM0Mjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;do you want to run this program&quot;" newline="True"/>
+            <declare name="start" type="String" array="False" size=""/>
+            <input variable="start"/>
+            <declare name="starta" type="String" array="False" size=""/>
+            <assign variable="starta" expression="&quot;yes&quot;"/>
+            <declare name="ave" type="Integer" array="False" size=""/>
+            <declare name="stu" type="Integer" array="False" size=""/>
+            <assign variable="stu" expression="0"/>
+            <if expression="start = &quot;yes&quot;">
+                <then>
+                    <while expression="starta = &quot;yes&quot;">
+                        <output expression="&quot;enter last name&quot;" newline="True"/>
+                        <declare name="lname" type="String" array="False" size=""/>
+                        <input variable="lname"/>
+                        <output expression="&quot;enter first test score&quot;" newline="True"/>
+                        <declare name="score1" type="Integer" array="False" size=""/>
+                        <input variable="score1"/>
+                        <output expression="&quot;enter test score 2&quot;" newline="True"/>
+                        <declare name="score2" type="Integer" array="False" size=""/>
+                        <input variable="score2"/>
+                        <assign variable="ave" expression="(score1 + score2)/2"/>
+                        <assign variable="stu" expression="stu + 1"/>
+                        <output expression="lname &amp; &quot; your test score is &quot; &amp; ave &amp; &quot; students = &quot; &amp; stu" newline="True"/>
+                        <output expression="&quot;do you want to run program again&quot;" newline="True"/>
+                        <input variable="starta"/>
+                    </while>
+                </then>
+                <else>
+                    <output expression="&quot;bye&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

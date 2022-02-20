@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-20 12:52:15 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMjozNTo1NSBQTTszMzM0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMjo1MjoxNSBQTTsyOzM0Mzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;do you want to run this program&quot;" newline="True"/>
+            <declare name="start" type="String" array="False" size=""/>
+            <input variable="start"/>
+            <declare name="starta" type="String" array="False" size=""/>
+            <assign variable="starta" expression="&quot;yes&quot;"/>
+            <if expression="start = &quot;yes&quot;">
+                <then>
+                    <while expression="starta = &quot;yes&quot;">
+                        <output expression="&quot;enter the quantity&quot;" newline="True"/>
+                        <declare name="qua" type="Integer" array="False" size=""/>
+                        <input variable="qua"/>
+                        <output expression="&quot;enter price of the item&quot;" newline="True"/>
+                        <declare name="price" type="Integer" array="False" size=""/>
+                        <declare name="price" type="Integer" array="False" size=""/>
+                        <declare name="eprice" type="Integer" array="False" size=""/>
+                        <assign variable="eprice" expression="qua * price"/>
+                        <declare name="dis" type="Integer" array="False" size=""/>
+                        <if expression="eprice &gt; 100000">
+                            <then>
+                                <assign variable="dis" expression="0.25"/>
+                            </then>
+                            <else>
+                                <assign variable="dis" expression="0.10"/>
+                            </else>
+                        </if>
+                        <declare name="disa" type="Integer" array="False" size=""/>
+                        <assign variable="dis" expression="eprice*disa"/>
+                        <declare name="wprice" type="Integer" array="False" size=""/>
+                        <assign variable="wprice" expression="eprice-disa"/>
+                        <declare name="disam" type="Integer" array="False" size=""/>
+                        <assign variable="disam" expression="disam + disa"/>
+                        <output expression="&quot;the total price was $&quot; &amp; wprice &amp; &quot;the discount amount was $&quot; &amp; disa &amp; &quot;the total discount was for all orders $&quot; &amp; disam" newline="True"/>
+                        <output expression="&quot;would you like to do again&quot;" newline="True"/>
+                        <input variable="starta"/>
+                    </while>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

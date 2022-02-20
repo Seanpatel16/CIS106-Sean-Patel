@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-20 12:35:32 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMTozODo1NiBBTTszMzIy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVGTjJLQkw7MjAyMi0wMi0yMDsxMjozNTozMiBQTTsyOzM0Mzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;do you want to run this program&quot;" newline="True"/>
+            <declare name="start" type="String" array="False" size=""/>
+            <input variable="start"/>
+            <declare name="starta" type="String" array="False" size=""/>
+            <assign variable="starta" expression="&quot;yes&quot;"/>
+            <declare name="emp" type="Integer" array="False" size=""/>
+            <assign variable="emp" expression="0"/>
+            <if expression="start = &quot;yes&quot;">
+                <then>
+                    <while expression="starta = &quot;yes&quot;">
+                        <output expression="&quot;enter last name&quot;" newline="True"/>
+                        <declare name="lname" type="String" array="False" size=""/>
+                        <input variable="lname"/>
+                        <output expression="&quot;enter the hours you worked&quot;" newline="True"/>
+                        <declare name="hours" type="Integer" array="False" size=""/>
+                        <input variable="hours"/>
+                        <output expression="&quot;enter rate of pay&quot;" newline="True"/>
+                        <declare name="pay" type="Integer" array="False" size=""/>
+                        <input variable="pay"/>
+                        <declare name="ot" type="Integer" array="False" size=""/>
+                        <if expression="hours &gt; 40">
+                            <then>
+                                <assign variable="ot" expression="hours - 40"/>
+                            </then>
+                            <else>
+                                <assign variable="ot" expression="0"/>
+                            </else>
+                        </if>
+                        <declare name="gpay" type="Integer" array="False" size=""/>
+                        <declare name="reghours" type="Integer" array="False" size=""/>
+                        <assign variable="reghours" expression="hours - ot"/>
+                        <assign variable="gpay" expression="(reghours * pay) + (ot * (pay * 1.5))"/>
+                        <assign variable="emp" expression="emp + 1"/>
+                        <output expression="lname &amp; &quot; your pay is $&quot; &amp; gpay &amp; &quot; employees = &quot; &amp;emp" newline="True"/>
+                        <output expression="&quot;do you want to make another entry&quot;" newline="True"/>
+                        <input variable="starta"/>
+                    </while>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
