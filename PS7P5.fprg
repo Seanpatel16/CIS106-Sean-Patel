@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-12 01:50:19 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1OSUpCQTE7MjAyMi0wMy0xMjswMTozNzoyOCBQTTszMzM0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1OSUpCQTE7MjAyMi0wMy0xMjswMTo1MDoxOSBQTTsyOzM0Mzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tcost" type="Integer" array="False" size=""/>
+            <declare name="code" type="String" array="False" size=""/>
+            <output expression="&quot;enter district code&quot;" newline="True"/>
+            <input variable="code"/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter credit hours&quot;" newline="True"/>
+            <input variable="hours"/>
+            <call expression="tuition(code,hours)"/>
+            <output expression="&quot;your code is &quot; &amp; code &amp; &quot; your cost is $&quot; &amp; tcost" newline="True"/>
+        </body>
+    </function>
+    <function name="tuition" type="Integer" variable="tcost">
+        <parameters>
+            <parameter name="code" type="String" array="False"/>
+            <parameter name="hours" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cost" type="Integer" array="False" size=""/>
+            <declare name="tcost" type="Integer" array="False" size=""/>
+            <if expression="code == &quot;I&quot;">
+                <then>
+                    <assign variable="cost" expression="210"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="code == &quot;O&quot;">
+                <then>
+                    <assign variable="cost" expression="550"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="tcost" expression="cost * hours"/>
+        </body>
+    </function>
+</flowgorithm>

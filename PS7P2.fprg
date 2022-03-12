@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-10 09:43:03 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdBN0RRS087MjAyMi0wMy0xMDswOToyMzo1OCBQTTszMzUw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdBN0RRS087MjAyMi0wMy0xMDswOTo0MzowMyBQTTsxOzM0NTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="batave" type="Integer" array="False" size=""/>
+            <declare name="hit" type="Integer" array="False" size=""/>
+            <output expression="&quot;how many hits do you have &quot;" newline="True"/>
+            <input variable="hit"/>
+            <declare name="abat" type="Integer" array="False" size=""/>
+            <output expression="&quot;how many times were you at bat&quot;" newline="True"/>
+            <input variable="abat"/>
+            <declare name="lname" type="String" array="False" size=""/>
+            <output expression="&quot;what is your last name&quot;" newline="True"/>
+            <input variable="lname"/>
+            <call expression="Bat(abat,hit)"/>
+            <assign variable="batave" expression="Bat(abat,hit)"/>
+            <output expression="lname &amp; &quot; your batting average is &quot; &amp; batave" newline="True"/>
+        </body>
+    </function>
+    <function name="Bat" type="Integer" variable="batave">
+        <parameters>
+            <parameter name="hit" type="Integer" array="False"/>
+            <parameter name="abat" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="batave" type="Integer" array="False" size=""/>
+            <assign variable="batave" expression="hit/abat"/>
+        </body>
+    </function>
+</flowgorithm>

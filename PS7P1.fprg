@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-10 09:10:29 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdBN0RRS087MjAyMi0wMy0xMDswOToxMDoxMyBQTTszMzM3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUdBN0RRS087MjAyMi0wMy0xMDswOToxMDoyOSBQTTsxOzM0NTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+</flowgorithm>

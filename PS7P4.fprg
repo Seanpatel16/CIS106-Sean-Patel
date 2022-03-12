@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-12 01:37:06 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1OSUpCQTE7MjAyMi0wMy0xMjswMToxMjo1NyBQTTszMzI5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1OSUpCQTE7MjAyMi0wMy0xMjswMTozNzowNiBQTTsyOzM0Mzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <declare name="pay" type="Integer" array="False" size=""/>
+            <declare name="code" type="String" array="False" size=""/>
+            <output expression="&quot;enter job code&quot;" newline="True"/>
+            <input variable="code"/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter hours worked&quot;" newline="True"/>
+            <input variable="hours"/>
+            <call expression="jcode(pay,code)"/>
+            <call expression="gpay(pay,hours)"/>
+            <output expression="&quot;your pay is &quot; &amp; pay &amp; &quot;your job code is &quot; &amp; code" newline="True"/>
+        </body>
+    </function>
+    <function name="gpay" type="Integer" variable="total">
+        <parameters>
+            <parameter name="pay" type="Integer" array="False"/>
+            <parameter name="hours" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="hours * pay"/>
+        </body>
+    </function>
+    <function name="jcode" type="Integer" variable="pay">
+        <parameters>
+            <parameter name="pay" type="Integer" array="False"/>
+            <parameter name="code" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pay" type="Integer" array="False" size=""/>
+            <if expression="code = &quot;L&quot;">
+                <then>
+                    <assign variable="pay" expression="25"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="code = &quot;A&quot;">
+                <then>
+                    <assign variable="pay" expression="30"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="code = &quot;J&quot;">
+                <then>
+                    <assign variable="pay" expression="50"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

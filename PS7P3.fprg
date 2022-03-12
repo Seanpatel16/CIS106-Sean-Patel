@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-11 12:13:31 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU9JMEtJSFU7MjAyMi0wMy0xMTsxMTo1NDoxOCBBTTszMzQw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU9JMEtJSFU7MjAyMi0wMy0xMTsxMjoxMzozMSBQTTsyOzM0NTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mpg" type="Integer" array="False" size=""/>
+            <declare name="miles" type="Integer" array="False" size=""/>
+            <declare name="gal" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the amount of miles&quot;" newline="True"/>
+            <input variable="miles"/>
+            <output expression="&quot;enter the gallons used&quot;" newline="True"/>
+            <input variable="gal"/>
+            <call expression="mpg(miles,gal)"/>
+            <call expression="galcost(gal)"/>
+            <output expression="&quot;your miles per gallon is &quot; &amp; mpg(miles,gal) &amp; &quot; it will cost you $&quot; &amp;galcost(gal)" newline="True"/>
+        </body>
+    </function>
+    <function name="galcost" type="Integer" variable="galcost">
+        <parameters>
+            <parameter name="gal" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="galcost" type="Integer" array="False" size=""/>
+            <assign variable="galcost" expression="gal*2.50"/>
+        </body>
+    </function>
+    <function name="mpg" type="Integer" variable="mpg">
+        <parameters>
+            <parameter name="miles" type="Integer" array="False"/>
+            <parameter name="gal" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="mpg" type="Integer" array="False" size=""/>
+            <assign variable="mpg" expression="miles/gal"/>
+        </body>
+    </function>
+</flowgorithm>
